@@ -1,4 +1,5 @@
 Stock Portfolio Prediction App 📈
+
 This Flask web application provides stock portfolio insights by displaying portfolio weights, predicting future stock prices, and estimating portfolio returns. The app generates random predictions as placeholders, which can later be replaced with real stock price predictions using a machine learning model or an external API.
 
 Features
