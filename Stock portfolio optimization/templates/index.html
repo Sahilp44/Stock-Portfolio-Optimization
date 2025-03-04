@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio Optimization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        td {
+            background-color: #fafafa;
+        }
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Stock Portfolio Optimization</h1>
+        <p>Optimizing your portfolio for better returns</p>
+    </header>
+
+    <div class="container">
+        <h1>Portfolio Weights</h1>
+        <div>
+            <!-- Portfolio Weights Table -->
+            {{ portfolio_weights | safe }}
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Future Stock Prices (Next 10 Days)</h1>
+        <div>
+            <!-- Future Stock Prices Table -->
+            {{ future_stock_prices | safe }}
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Future Portfolio Returns (Next 10 Days)</h1>
+        <div>
+            <!-- Future Portfolio Returns Table -->
+            {{ future_portfolio_returns | safe }}
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="/predict">Predict Future Prices and Returns</a>
+    </div>
+
+</body>
+</html>

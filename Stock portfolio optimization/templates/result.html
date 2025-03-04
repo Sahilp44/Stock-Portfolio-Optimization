@@ -1,0 +1,18 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Portfolio Analysis</h2>
+
+<h3>Optimal Portfolio Weights</h3>
+<ul>
+    {% for ticker, weight in weights.items() %}
+    <li><strong>{{ ticker }}:</strong> {{ weight * 100 }}%</li>
+    {% endfor %}
+</ul>
+
+<h3>Predicted Return for AAPL in 2024</h3>
+<p>{{ future_return }}%</p>
+
+<a href="/" class="btn">Back to Home</a>
+{% endblock %}
